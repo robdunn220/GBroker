@@ -23,4 +23,5 @@ def route_index():
 @app.route('/home')
 def home():
     return 'Tits';
+
 app.run(debug=True)

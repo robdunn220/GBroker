@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+# from dotenv import load_dotenv, find_dotenv
+# load_dotenv(find_dotenv())
+>>>>>>> f8b39d7bec836bb3b0261c1753f4d8cd169c3db6
 from flask import Flask, render_template, redirect, request, session, flash, jsonify
 import pg, os
 from time import time
@@ -18,4 +23,11 @@ db = pg.DB(
 def route_index():
     return app.send_static_file('index.html');
 
+<<<<<<< HEAD
+=======
+@app.route('/home')
+def home():
+    return 'Tits';
+
+>>>>>>> f8b39d7bec836bb3b0261c1753f4d8cd169c3db6
 app.run(debug=True)

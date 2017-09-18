@@ -20,11 +20,20 @@ app.factory("GBroker_API", function factoryFunction($http, $cookies) {
     })
   }
 
+  service.displayGuns = function() {
+    return $http({
+      url : '/guns'
+    })
+  }
   return service;
 });
 
 app.controller('HomeController', function($scope, GBroker_API, $cookies, $rootScope){
     GBroker_API.displayHome();
+});
+
+app.controller('GunsController', function ($scope, GBroker_API, $cookies, $rootScope) {
+  GBroker_API.displyGuns();
 });
 
 app.config(function($stateProvider, $urlRouterProvider) {
@@ -34,5 +43,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url : '/home',
       templateUrl : 'home.html',
       controller: 'HomeController'
+    }),
+    .state({
+      name : 'guns',
+      url : '/guns',
+      templateUrl : 'guns.html',
+      controller: 'GunsController'
     });
 });

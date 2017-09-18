@@ -14,13 +14,19 @@
     <div>
       <div>
         <div>
-
+          <textarea name="search" rows="1" cols="8" placeholder="Search"></textarea>
         </div>
         <div>
           <a ui-sref="home"><h1>Gun Broker</h1></a>
         </div>
         <div>
-
+          <a href="guns"><h1>Guns</h1></a>
+        </div>
+      </div>
+      <div>
+        <div ng-if="login">
+          <a href="login"><h2>Login</h2></a>
+          <a href="signUp"><h2>Sign Up</h2></a>
         </div>
       </div>
     </div>

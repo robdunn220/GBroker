@@ -1,5 +1,3 @@
-# from dotenv import load_dotenv, find_dotenv
-# load_dotenv(find_dotenv())
 from flask import Flask, render_template, redirect, request, session, flash, jsonify
 import pg, os
 from time import time
@@ -19,9 +17,5 @@ db = pg.DB(
 @app.route('/')
 def route_index():
     return app.send_static_file('index.html');
-
-@app.route('/home')
-def home():
-    return 'Tits';
 
 app.run(debug=True)
